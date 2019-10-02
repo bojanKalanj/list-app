@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 
 class ProductsListItem extends Component {
+  product = this.props.product;
   render() {
-    return <div></div>;
+    return <div>{this.product.name}</div>;
   }
 }
 
