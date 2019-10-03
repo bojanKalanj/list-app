@@ -12,9 +12,9 @@ function App() {
     <Router>
       <Switch>
         <Route exact path="/" component={ProductsContainer} />
-        <Route exact path="/item/:id" component={Item} />
-        <Route exact path="/new-item" component={NewItem} />
-        <Route exact path="/edit-item/:id" component={EditItem} />
+        <Route exact path="/items/new" component={NewItem} />
+        <Route exact path="/items/:id" component={Item} />
+        <Route exact path="/items/edit/:id" component={EditItem} />
       </Switch>
     </Router>
   );
