@@ -6,7 +6,7 @@ class ProductsListItem extends Component {
     return (
       <Fragment>
         <ul>
-          <li>Name - {product.name}</li>
+          <li>Name - {product.title}</li>
           <li>Description - {product.desc}</li>
           <li>Price - {product.price}</li>
         </ul>
