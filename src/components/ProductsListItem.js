@@ -1,9 +1,21 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 
 class ProductsListItem extends Component {
-  product = this.props.product;
   render() {
-    return <div>{this.product.name}</div>;
+    var { product } = this.props;
+    return (
+      <Fragment>
+        <ul>
+          <li>Name - {product.name}</li>
+          <li>Description - {product.desc}</li>
+          <li>Price - {product.price}</li>
+        </ul>
+        <button onClick={() => this.props.deleteProdHandler(product.id)}>
+          Delete product
+        </button>
+        <hr />
+      </Fragment>
+    );
   }
 }
 

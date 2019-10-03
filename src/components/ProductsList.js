@@ -2,13 +2,18 @@ import React, { Component } from "react";
 import ProductsListItem from "./ProductsListItem";
 
 class ProductsList extends Component {
-  products = this.props.products;
-
   render() {
+    var { products, deleteProdHandler } = this.props;
     return (
       <div>
-        {this.products.map(p => {
-          return <ProductsListItem product={p} />;
+        {products.map(p => {
+          return (
+            <ProductsListItem
+              product={p}
+              deleteProdHandler={deleteProdHandler}
+              key={p.id}
+            />
+          );
         })}
       </div>
     );
