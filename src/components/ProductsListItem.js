@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from "react";
+import { Link } from "react-router-dom";
 
 class ProductsListItem extends Component {
   render() {
@@ -6,7 +7,9 @@ class ProductsListItem extends Component {
     return (
       <Fragment>
         <ul>
-          <li>Name - {product.title}</li>
+          <li>
+            <Link to={`/item/${product.id}`}>Name - {product.title}</Link>
+          </li>
           <li>Description - {product.desc}</li>
           <li>Price - {product.price}</li>
         </ul>
